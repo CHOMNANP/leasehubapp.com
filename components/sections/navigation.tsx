@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useState } from "react"
-import { Menu, X, Home } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X, Home } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const navLinks = [
   { href: "/features", label: "Features" },
   { href: "/pricing", label: "Pricing" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
-]
+];
 
 export function Navigation() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -49,7 +49,9 @@ export function Navigation() {
             Sign In
           </Link>
           <Button asChild>
-            <Link href="https://dashboard.leasehubapp.com/signup">Get Started Free</Link>
+            <Link href="https://dashboard.leasehubapp.com?onboarding">
+              Get Started Free
+            </Link>
           </Button>
         </div>
 
@@ -70,7 +72,7 @@ export function Navigation() {
       <div
         className={cn(
           "md:hidden border-t bg-background",
-          mobileMenuOpen ? "block" : "hidden"
+          mobileMenuOpen ? "block" : "hidden",
         )}
       >
         <div className="container py-4 space-y-4">
@@ -93,13 +95,15 @@ export function Navigation() {
               Sign In
             </Link>
             <Button asChild className="w-full">
-              <Link href="https://dashboard.leasehubapp.com/signup">Get Started Free</Link>
+              <Link href="https://dashboard.leasehubapp.com?onboarding">
+                Get Started Free
+              </Link>
             </Button>
           </div>
         </div>
       </div>
     </header>
-  )
+  );
 }
 
-import { Separator } from "@/components/ui/separator"
+import { Separator } from "@/components/ui/separator";

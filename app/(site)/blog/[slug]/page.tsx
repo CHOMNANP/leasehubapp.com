@@ -1,17 +1,18 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { notFound } from "next/navigation"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Calendar, Clock, ArrowLeft, User } from "lucide-react"
-import { formatDate } from "@/lib/utils"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
+import { formatDate } from "@/lib/utils";
 
 // Static blog posts data (same as blog page)
 const posts = [
   {
     title: "How to Collect Rent Online: A Complete Guide for Small Landlords",
-    excerpt: "Stop chasing checks and waiting in line at the bank. Here's how to set up online rent collection in under 10 minutes.",
+    excerpt:
+      "Stop chasing checks and waiting in line at the bank. Here's how to set up online rent collection in under 10 minutes.",
     content: `
       <p>Chasing down rent checks is one of the most time-consuming parts of being a landlord. You leave notes, send texts, make phone calls, and still find yourself driving across town to pick up checks or waiting days for mail delivery.</p>
 
@@ -100,7 +101,8 @@ const posts = [
   },
   {
     title: "5 Automation Rules Every Small Landlord Needs",
-    excerpt: "Reclaim your weekends with these simple automation workflows for rent collection, late fees, maintenance reminders, and tenant communication.",
+    excerpt:
+      "Reclaim your weekends with these simple automation workflows for rent collection, late fees, maintenance reminders, and tenant communication.",
     content: `<p>Content coming soon...</p>`,
     slug: "automation-rules-landlords",
     publishedAt: "2024-06-12",
@@ -113,7 +115,8 @@ const posts = [
   },
   {
     title: "Late Rent Notice Templates (Free Download)",
-    excerpt: "Professional, legally-compliant templates for every stage of the late rent process. Copy, customize, and send.",
+    excerpt:
+      "Professional, legally-compliant templates for every stage of the late rent process. Copy, customize, and send.",
     content: `<p>Content coming soon...</p>`,
     slug: "late-rent-notice-templates",
     publishedAt: "2024-06-10",
@@ -126,7 +129,8 @@ const posts = [
   },
   {
     title: "Tenant Screening: Red Flags and Green Lights",
-    excerpt: "How to spot great tenants and avoid problematic ones. A practical guide to credit checks, reference verification, and gut instinct.",
+    excerpt:
+      "How to spot great tenants and avoid problematic ones. A practical guide to credit checks, reference verification, and gut instinct.",
     content: `<p>Content coming soon...</p>`,
     slug: "tenant-screening-guide",
     publishedAt: "2024-06-08",
@@ -139,7 +143,8 @@ const posts = [
   },
   {
     title: "Rental Property Accounting 101: Schedule E Made Simple",
-    excerpt: "Don't dread tax season. Here's how to track income and expenses throughout the year so your accountant (or tax software) loves you.",
+    excerpt:
+      "Don't dread tax season. Here's how to track income and expenses throughout the year so your accountant (or tax software) loves you.",
     content: `<p>Content coming soon...</p>`,
     slug: "rental-property-accounting",
     publishedAt: "2024-06-05",
@@ -152,7 +157,8 @@ const posts = [
   },
   {
     title: "When to DIY vs. Hire a Property Manager",
-    excerpt: "The honest math on when it makes sense to manage yourself with software versus hiring a professional property manager.",
+    excerpt:
+      "The honest math on when it makes sense to manage yourself with software versus hiring a professional property manager.",
     content: `<p>Content coming soon...</p>`,
     slug: "diy-vs-property-manager",
     publishedAt: "2024-06-01",
@@ -163,40 +169,44 @@ const posts = [
       role: "Property Management Experts",
     },
   },
-]
+];
 
 // Generate static params for all blog posts
 export function generateStaticParams() {
   return posts.map((post) => ({
     slug: post.slug,
-  }))
+  }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const post = posts.find((p) => p.slug === params.slug)
+export function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Metadata {
+  const post = posts.find((p) => p.slug === params.slug);
 
   if (!post) {
     return {
       title: "Post Not Found",
-    }
+    };
   }
 
   return {
     title: post.title,
     description: post.excerpt,
-  }
+  };
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const post = posts.find((p) => p.slug === params.slug)
+  const post = posts.find((p) => p.slug === params.slug);
 
   if (!post) {
-    notFound()
+    notFound();
   }
 
   const relatedPosts = posts
     .filter((p) => p.category === post.category && p.slug !== post.slug)
-    .slice(0, 2)
+    .slice(0, 2);
 
   return (
     <div className="pb-24">
@@ -254,7 +264,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <section className="py-12">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <div 
+            <div
               className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-leasehub-700 prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-leasehub-500 prose-blockquote:bg-leasehub-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
@@ -267,9 +277,12 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 </div>
                 <div>
                   <p className="font-semibold">{post.author.name}</p>
-                  <p className="text-sm text-muted-foreground">{post.author.role}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {post.author.role}
+                  </p>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Helping small landlords save time and collect rent faster with practical tips and automation strategies.
+                    Helping small landlords save time and collect rent faster
+                    with practical tips and automation strategies.
                   </p>
                 </div>
               </CardContent>
@@ -286,7 +299,10 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               <h2 className="text-2xl font-bold mb-6">Related articles</h2>
               <div className="grid gap-6">
                 {relatedPosts.map((relatedPost) => (
-                  <Card key={relatedPost.slug} className="hover:shadow-md transition-shadow">
+                  <Card
+                    key={relatedPost.slug}
+                    className="hover:shadow-md transition-shadow"
+                  >
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between gap-4">
                         <div>
@@ -323,11 +339,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               Ready to simplify your property management?
             </h2>
             <p className="text-muted-foreground mb-6">
-              Join 500+ small landlords using LeaseHub to automate rent collection 
-              and reclaim their time.
+              Join 500+ small landlords using LeaseHub to automate rent
+              collection and reclaim their time.
             </p>
             <Button size="lg" className="gap-2" asChild>
-              <Link href="https://dashboard.leasehubapp.com/signup">
+              <Link href="https://dashboard.leasehubapp.com?onboarding">
                 Get Started Free
               </Link>
             </Button>
@@ -335,5 +351,5 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         </div>
       </section>
     </div>
-  )
+  );
 }

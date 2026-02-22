@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, ArrowRight } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, ArrowRight } from "lucide-react";
 
 const plans = [
   {
@@ -21,7 +21,7 @@ const plans = [
       "Mobile app access",
     ],
     cta: "Get Started Free",
-    href: "https://dashboard.leasehubapp.com/signup",
+    href: "https://dashboard.leasehubapp.com?onboarding",
     popular: false,
   },
   {
@@ -40,10 +40,10 @@ const plans = [
       "Custom branding",
     ],
     cta: "Start Free Trial",
-    href: "https://dashboard.leasehubapp.com/signup",
+    href: "https://dashboard.leasehubapp.com?onboarding",
     popular: true,
   },
-]
+];
 
 export function PricingPreviewSection() {
   return (
@@ -54,15 +54,16 @@ export function PricingPreviewSection() {
             Simple, transparent pricing
           </h2>
           <p className="text-lg text-muted-foreground">
-            Start free, scale as you grow. No hidden fees, no setup costs, cancel anytime.
+            Start free, scale as you grow. No hidden fees, no setup costs,
+            cancel anytime.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {plans.map((plan) => (
-            <Card 
-              key={plan.name} 
-              className={`relative ${plan.popular ? 'border-leasehub-500 shadow-lg' : ''}`}
+            <Card
+              key={plan.name}
+              className={`relative ${plan.popular ? "border-leasehub-500 shadow-lg" : ""}`}
             >
               {plan.popular && (
                 <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-leasehub-600 hover:bg-leasehub-700">
@@ -71,10 +72,14 @@ export function PricingPreviewSection() {
               )}
               <CardHeader className="text-center pb-4">
                 <h3 className="text-2xl font-bold">{plan.name}</h3>
-                <p className="text-sm text-muted-foreground">{plan.description}</p>
+                <p className="text-sm text-muted-foreground">
+                  {plan.description}
+                </p>
                 <div className="mt-4">
                   <span className="text-4xl font-bold">{plan.price}</span>
-                  <span className="text-muted-foreground ml-2">{plan.priceDetail}</span>
+                  <span className="text-muted-foreground ml-2">
+                    {plan.priceDetail}
+                  </span>
                 </div>
               </CardHeader>
               <CardContent>
@@ -86,8 +91,8 @@ export function PricingPreviewSection() {
                     </li>
                   ))}
                 </ul>
-                <Button 
-                  className="w-full gap-2" 
+                <Button
+                  className="w-full gap-2"
                   variant={plan.popular ? "default" : "outline"}
                   asChild
                 >
@@ -111,5 +116,5 @@ export function PricingPreviewSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

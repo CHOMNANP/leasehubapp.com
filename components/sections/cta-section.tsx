@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles } from "lucide-react"
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 export function CTASection() {
   return (
@@ -17,20 +17,29 @@ export function CTASection() {
             Ready to simplify your property management?
           </h2>
           <p className="text-xl text-leasehub-100 mb-8">
-            Join 500+ small landlords who&apos;ve reclaimed their time with LeaseHub. 
-            Setup takes 5 minutes, and your first property is always free.
+            Join 500+ small landlords who&apos;ve reclaimed their time with
+            LeaseHub. Setup takes 5 minutes, and your first property is always
+            free.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="gap-2 text-leasehub-700" asChild>
-              <Link href="https://dashboard.leasehubapp.com/signup">
+            <Button
+              size="lg"
+              variant="secondary"
+              className="gap-2 text-leasehub-700"
+              asChild
+            >
+              <Link href="https://dashboard.leasehubapp.com?onboarding">
                 Get Started Free
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2 border-white text-white hover:bg-white hover:text-leasehub-700" asChild>
-              <Link href="/contact">
-                Talk to Sales
-              </Link>
+            <Button
+              size="lg"
+              variant="outline"
+              className="gap-2 border-white text-white hover:bg-white hover:text-leasehub-700"
+              asChild
+            >
+              <Link href="/contact">Talk to Sales</Link>
             </Button>
           </div>
           <p className="text-sm text-leasehub-200 mt-6">
@@ -39,5 +48,5 @@ export function CTASection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

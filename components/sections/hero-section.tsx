@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, CheckCircle2, Play } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, CheckCircle2, Play } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -30,14 +30,14 @@ export function HeroSection() {
             </h1>
 
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Built for small landlords with 2-20 units. Collect rent 3x faster, 
-              automate tenant communication, and reclaim your weekends. No complex 
-              features you&apos;ll never use.
+              Built for small landlords with 2-20 units. Collect rent 3x faster,
+              automate tenant communication, and reclaim your weekends. No
+              complex features you&apos;ll never use.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
               <Button size="lg" className="gap-2" asChild>
-                <Link href="https://dashboard.leasehubapp.com/signup">
+                <Link href="https://dashboard.leasehubapp.com?onboarding">
                   Start Free — First Property
                   <ArrowRight className="h-4 w-4" />
                 </Link>
@@ -79,37 +79,59 @@ export function HeroSection() {
                       <div className="w-3 h-3 rounded-full bg-amber-400" />
                       <div className="w-3 h-3 rounded-full bg-green-400" />
                     </div>
-                    <span className="text-xs text-muted-foreground">LeaseHub Dashboard</span>
+                    <span className="text-xs text-muted-foreground">
+                      LeaseHub Dashboard
+                    </span>
                   </div>
                   <div className="space-y-3">
                     <div className="flex justify-between items-center p-3 bg-leasehub-50 rounded-lg">
-                      <span className="text-sm font-medium">Rent Collected (June)</span>
-                      <span className="text-lg font-bold text-leasehub-700">$12,450</span>
+                      <span className="text-sm font-medium">
+                        Rent Collected (June)
+                      </span>
+                      <span className="text-lg font-bold text-leasehub-700">
+                        $12,450
+                      </span>
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       <div className="p-3 bg-gray-50 rounded-lg">
-                        <span className="text-xs text-muted-foreground block">Occupancy</span>
+                        <span className="text-xs text-muted-foreground block">
+                          Occupancy
+                        </span>
                         <span className="text-lg font-semibold">94%</span>
                       </div>
                       <div className="p-3 bg-gray-50 rounded-lg">
-                        <span className="text-xs text-muted-foreground block">Pending</span>
+                        <span className="text-xs text-muted-foreground block">
+                          Pending
+                        </span>
                         <span className="text-lg font-semibold">$1,200</span>
                       </div>
                     </div>
                     <div className="space-y-2">
                       <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded">
-                        <div className="w-8 h-8 rounded-full bg-leasehub-100 flex items-center justify-center text-leasehub-700 text-xs font-bold">JD</div>
+                        <div className="w-8 h-8 rounded-full bg-leasehub-100 flex items-center justify-center text-leasehub-700 text-xs font-bold">
+                          JD
+                        </div>
                         <div className="flex-1">
-                          <p className="text-sm font-medium">John Doe — Unit 4A</p>
-                          <p className="text-xs text-leasehub-600">Paid on time ✓</p>
+                          <p className="text-sm font-medium">
+                            John Doe — Unit 4A
+                          </p>
+                          <p className="text-xs text-leasehub-600">
+                            Paid on time ✓
+                          </p>
                         </div>
                         <span className="text-sm font-semibold">$1,500</span>
                       </div>
                       <div className="flex items-center gap-3 p-2 hover:bg-gray-50 rounded">
-                        <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 text-xs font-bold">SM</div>
+                        <div className="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center text-amber-700 text-xs font-bold">
+                          SM
+                        </div>
                         <div className="flex-1">
-                          <p className="text-sm font-medium">Sarah Miller — Unit 2B</p>
-                          <p className="text-xs text-amber-600">Due in 3 days</p>
+                          <p className="text-sm font-medium">
+                            Sarah Miller — Unit 2B
+                          </p>
+                          <p className="text-xs text-amber-600">
+                            Due in 3 days
+                          </p>
                         </div>
                         <span className="text-sm font-semibold">$1,350</span>
                       </div>
@@ -126,12 +148,14 @@ export function HeroSection() {
               </div>
               <div>
                 <p className="text-sm font-semibold">Payment Received</p>
-                <p className="text-xs text-muted-foreground">Just now from Unit 3C</p>
+                <p className="text-xs text-muted-foreground">
+                  Just now from Unit 3C
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

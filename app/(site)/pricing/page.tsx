@@ -57,7 +57,7 @@ const plans = [
       "Multi-user accounts",
     ],
     cta: "Start Free Trial",
-    href: "https://dashboard.leasehubapp.com/signup",
+    href: "https://dashboard.leasehubapp.com?onboarding",
     popular: true,
   },
 ];
