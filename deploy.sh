@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "🚀 RentHive Website Deployment Script"
+echo "🚀 LeaseHub Website Deployment Script"
 echo "======================================"
 
 # Check if Vercel CLI is installed

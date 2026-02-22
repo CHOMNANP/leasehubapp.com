@@ -86,7 +86,7 @@ export default function BlogPage() {
       <section className="pt-24 pb-12">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-4 bg-renthive-100 text-renthive-800">Blog</Badge>
+            <Badge className="mb-4 bg-leasehub-100 text-leasehub-800">Blog</Badge>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
               Resources for small landlords
             </h1>
@@ -122,8 +122,8 @@ export default function BlogPage() {
             <Card className="overflow-hidden">
               <CardContent className="p-0">
                 <div className="grid md:grid-cols-2">
-                  <div className="aspect-video md:aspect-auto bg-gradient-to-br from-renthive-100 to-renthive-50 flex items-center justify-center">
-                    <span className="text-6xl font-bold text-renthive-200">
+                  <div className="aspect-video md:aspect-auto bg-gradient-to-br from-leasehub-100 to-leasehub-50 flex items-center justify-center">
+                    <span className="text-6xl font-bold text-leasehub-200">
                       {featuredPost.category[0]}
                     </span>
                   </div>
@@ -132,7 +132,7 @@ export default function BlogPage() {
                       Featured
                     </Badge>
                     <Link href={`/blog/${featuredPost.slug}`}>
-                      <h2 className="text-2xl md:text-3xl font-bold mb-4 hover:text-renthive-700 transition-colors">
+                      <h2 className="text-2xl md:text-3xl font-bold mb-4 hover:text-leasehub-700 transition-colors">
                         {featuredPost.title}
                       </h2>
                     </Link>
@@ -151,7 +151,7 @@ export default function BlogPage() {
                     </div>
                     <Link
                       href={`/blog/${featuredPost.slug}`}
-                      className="inline-flex items-center gap-2 text-renthive-700 font-medium hover:underline"
+                      className="inline-flex items-center gap-2 text-leasehub-700 font-medium hover:underline"
                     >
                       Read article
                       <ArrowRight className="h-4 w-4" />
@@ -187,7 +187,7 @@ export default function BlogPage() {
                       <span className="text-xs text-muted-foreground">{post.readTime}</span>
                     </div>
                     <Link href={`/blog/${post.slug}`} className="flex-1">
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-renthive-700 transition-colors">
+                      <h3 className="text-lg font-semibold mb-2 group-hover:text-leasehub-700 transition-colors">
                         {post.title}
                       </h3>
                     </Link>
@@ -223,7 +223,7 @@ export default function BlogPage() {
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-renthive-600 text-white rounded-lg font-medium hover:bg-renthive-700 transition-colors"
+                className="px-6 py-2 bg-leasehub-600 text-white rounded-lg font-medium hover:bg-leasehub-700 transition-colors"
               >
                 Subscribe
               </button>

@@ -1,6 +1,6 @@
-# RentHive Website
+# LeaseHub Website
 
-A modern, SEO-optimized marketing website for RentHive - property management software for small landlords.
+A modern, SEO-optimized marketing website for LeaseHub - property management software for small landlords.
 
 ## Tech Stack
 
@@ -113,7 +113,7 @@ Edit `tailwind.config.js` to change brand colors:
 
 ```javascript
 colors: {
-  renthive: {
+  leasehub: {
     50: "#f0fdf4",
     100: "#dcfce7",
     // ... etc
@@ -155,4 +155,4 @@ SEO is handled via Next.js Metadata API in `app/layout.tsx`:
 
 ## License
 
-Private - RentHive
+Private - LeaseHub

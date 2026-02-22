@@ -21,7 +21,7 @@ const plans = [
       "Mobile app access",
     ],
     cta: "Get Started Free",
-    href: "https://app.renthive.io/signup",
+    href: "https://dashboard.leasehubapp.com/signup",
     popular: false,
   },
   {
@@ -40,7 +40,7 @@ const plans = [
       "Custom branding",
     ],
     cta: "Start Free Trial",
-    href: "https://app.renthive.io/signup",
+    href: "https://dashboard.leasehubapp.com/signup",
     popular: true,
   },
 ]
@@ -62,10 +62,10 @@ export function PricingPreviewSection() {
           {plans.map((plan) => (
             <Card 
               key={plan.name} 
-              className={`relative ${plan.popular ? 'border-renthive-500 shadow-lg' : ''}`}
+              className={`relative ${plan.popular ? 'border-leasehub-500 shadow-lg' : ''}`}
             >
               {plan.popular && (
-                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-renthive-600 hover:bg-renthive-700">
+                <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-leasehub-600 hover:bg-leasehub-700">
                   Most Popular
                 </Badge>
               )}
@@ -81,7 +81,7 @@ export function PricingPreviewSection() {
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-3">
-                      <Check className="h-5 w-5 text-renthive-600 shrink-0 mt-0.5" />
+                      <Check className="h-5 w-5 text-leasehub-600 shrink-0 mt-0.5" />
                       <span className="text-sm">{feature}</span>
                     </li>
                   ))}
@@ -104,7 +104,7 @@ export function PricingPreviewSection() {
         <div className="text-center mt-12">
           <p className="text-sm text-muted-foreground">
             Need more than 50 units?{" "}
-            <Link href="/contact" className="text-renthive-700 hover:underline">
+            <Link href="/contact" className="text-leasehub-700 hover:underline">
               Contact us for custom pricing
             </Link>
           </p>

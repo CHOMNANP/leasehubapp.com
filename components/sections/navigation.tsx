@@ -21,10 +21,10 @@ export function Navigation() {
       <nav className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 font-bold text-xl">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-renthive-600 text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-leasehub-600 text-white">
             <Home className="h-5 w-5" />
           </div>
-          <span>RentHive</span>
+          <span>LeaseHub</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -43,13 +43,13 @@ export function Navigation() {
         {/* CTA Buttons */}
         <div className="hidden md:flex items-center gap-4">
           <Link
-            href="https://app.renthive.io"
+            href="https://dashboard.leasehubapp.com"
             className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
           >
             Sign In
           </Link>
           <Button asChild>
-            <Link href="https://app.renthive.io/signup">Get Started Free</Link>
+            <Link href="https://dashboard.leasehubapp.com/signup">Get Started Free</Link>
           </Button>
         </div>
 
@@ -87,13 +87,13 @@ export function Navigation() {
           <Separator />
           <div className="flex flex-col gap-2">
             <Link
-              href="https://app.renthive.io"
+              href="https://dashboard.leasehubapp.com"
               className="text-sm font-medium text-muted-foreground"
             >
               Sign In
             </Link>
             <Button asChild className="w-full">
-              <Link href="https://app.renthive.io/signup">Get Started Free</Link>
+              <Link href="https://dashboard.leasehubapp.com/signup">Get Started Free</Link>
             </Button>
           </div>
         </div>

@@ -8,7 +8,7 @@ import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn about RentHive's mission to simplify property management for small landlords. Built by landlords, for landlords.",
+  description: "Learn about LeaseHub's mission to simplify property management for small landlords. Built by landlords, for landlords.",
 }
 
 const values = [
@@ -20,7 +20,7 @@ const values = [
   {
     icon: Heart,
     title: "Built with Care",
-    description: "We're landlords too. We understand the 2 AM maintenance calls and the stress of late rent. RentHive is built to solve real problems.",
+    description: "We're landlords too. We understand the 2 AM maintenance calls and the stress of late rent. LeaseHub is built to solve real problems.",
   },
   {
     icon: Users,
@@ -48,13 +48,13 @@ export default function AboutPage() {
       <section className="pt-24 pb-12">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-4 bg-renthive-100 text-renthive-800">About Us</Badge>
+            <Badge className="mb-4 bg-leasehub-100 text-leasehub-800">About Us</Badge>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
               Built by landlords,{" "}
               <span className="gradient-text">for landlords</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              RentHive was born from frustration. We couldn&apos;t find property management 
+              LeaseHub was born from frustration. We couldn&apos;t find property management 
               software that understood the needs of small landlords—so we built it ourselves.
             </p>
           </div>
@@ -65,9 +65,9 @@ export default function AboutPage() {
       <section className="py-12">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="aspect-video rounded-xl bg-gradient-to-br from-renthive-100 to-renthive-50 flex items-center justify-center">
+            <div className="aspect-video rounded-xl bg-gradient-to-br from-leasehub-100 to-leasehub-50 flex items-center justify-center">
               <div className="text-center p-8">
-                <Home className="h-16 w-16 text-renthive-300 mx-auto mb-4" />
+                <Home className="h-16 w-16 text-leasehub-300 mx-auto mb-4" />
                 <p className="text-muted-foreground">Founder Story Image</p>
               </div>
             </div>
@@ -84,11 +84,11 @@ export default function AboutPage() {
                   and spending more time learning the software than actually managing our properties.
                 </p>
                 <p>
-                  So we built RentHive—a simple, affordable tool specifically for landlords with 2-20 units. 
+                  So we built LeaseHub—a simple, affordable tool specifically for landlords with 2-20 units. 
                   No bloat, no complexity, just the essential features you actually need.
                 </p>
                 <p>
-                  Today, over 500 landlords use RentHive to collect rent, manage tenants, and reclaim their weekends. 
+                  Today, over 500 landlords use LeaseHub to collect rent, manage tenants, and reclaim their weekends. 
                   We&apos;re still small, still focused, and still building exactly what small landlords need.
                 </p>
               </div>
@@ -98,15 +98,15 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="py-24 bg-renthive-900 text-white">
+      <section className="py-24 bg-leasehub-900 text-white">
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold text-renthive-400 mb-2">
+                <div className="text-4xl md:text-5xl font-bold text-leasehub-400 mb-2">
                   {stat.value}
                 </div>
-                <div className="text-renthive-200">{stat.label}</div>
+                <div className="text-leasehub-200">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -121,7 +121,7 @@ export default function AboutPage() {
               What we believe
             </h2>
             <p className="text-muted-foreground">
-              These principles guide every decision we make at RentHive.
+              These principles guide every decision we make at LeaseHub.
             </p>
           </div>
 
@@ -129,8 +129,8 @@ export default function AboutPage() {
             {values.map((value) => (
               <Card key={value.title} className="h-full">
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-renthive-100 flex items-center justify-center mb-4">
-                    <value.icon className="h-6 w-6 text-renthive-700" />
+                  <div className="w-12 h-12 rounded-lg bg-leasehub-100 flex items-center justify-center mb-4">
+                    <value.icon className="h-6 w-6 text-leasehub-700" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
                   <p className="text-muted-foreground">{value.description}</p>
@@ -156,22 +156,22 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-3 gap-6 max-w-3xl mx-auto">
             <div className="text-center">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-renthive-200 to-renthive-100 mx-auto mb-4 flex items-center justify-center">
-                <Users className="h-10 w-10 text-renthive-600" />
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-leasehub-200 to-leasehub-100 mx-auto mb-4 flex items-center justify-center">
+                <Users className="h-10 w-10 text-leasehub-600" />
               </div>
               <h3 className="font-semibold">Founder & CEO</h3>
-              <p className="text-sm text-muted-foreground">Former landlord, now full-time on RentHive</p>
+              <p className="text-sm text-muted-foreground">Former landlord, now full-time on LeaseHub</p>
             </div>
             <div className="text-center">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-renthive-200 to-renthive-100 mx-auto mb-4 flex items-center justify-center">
-                <Users className="h-10 w-10 text-renthive-600" />
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-leasehub-200 to-leasehub-100 mx-auto mb-4 flex items-center justify-center">
+                <Users className="h-10 w-10 text-leasehub-600" />
               </div>
               <h3 className="font-semibold">Head of Product</h3>
               <p className="text-sm text-muted-foreground">10 years in property tech</p>
             </div>
             <div className="text-center">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-renthive-200 to-renthive-100 mx-auto mb-4 flex items-center justify-center">
-                <Users className="h-10 w-10 text-renthive-600" />
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-leasehub-200 to-leasehub-100 mx-auto mb-4 flex items-center justify-center">
+                <Users className="h-10 w-10 text-leasehub-600" />
               </div>
               <h3 className="font-semibold">Customer Success</h3>
               <p className="text-sm text-muted-foreground">Former property manager</p>
@@ -185,16 +185,16 @@ export default function AboutPage() {
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-bold tracking-tight mb-6">
-              Join the RentHive community
+              Join the LeaseHub community
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              We&apos;re building RentHive in public, with constant feedback from our users. 
+              We&apos;re building LeaseHub in public, with constant feedback from our users. 
               Have a feature request or just want to say hi? We&apos;d love to hear from you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="gap-2" asChild>
-                <Link href="https://app.renthive.io/signup">
-                  Try RentHive Free
+                <Link href="https://dashboard.leasehubapp.com/signup">
+                  Try LeaseHub Free
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>

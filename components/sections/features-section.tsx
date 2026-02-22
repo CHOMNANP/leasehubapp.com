@@ -61,7 +61,7 @@ export function FeaturesSection() {
             Everything you need, nothing you don&apos;t
           </h2>
           <p className="text-lg text-muted-foreground">
-            We built RentHive specifically for small landlords. No complex enterprise 
+            We built LeaseHub specifically for small landlords. No complex enterprise 
             features—just the tools you actually need to manage your properties efficiently.
           </p>
         </div>
@@ -70,14 +70,14 @@ export function FeaturesSection() {
           {features.map((feature) => (
             <Card key={feature.title} className="group hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-lg bg-renthive-100 flex items-center justify-center mb-4 group-hover:bg-renthive-200 transition-colors">
-                  <feature.icon className="h-6 w-6 text-renthive-700" />
+                <div className="w-12 h-12 rounded-lg bg-leasehub-100 flex items-center justify-center mb-4 group-hover:bg-leasehub-200 transition-colors">
+                  <feature.icon className="h-6 w-6 text-leasehub-700" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground text-sm mb-4">
                   {feature.description}
                 </p>
-                <div className="flex items-center gap-2 text-sm font-medium text-renthive-700">
+                <div className="flex items-center gap-2 text-sm font-medium text-leasehub-700">
                   <Zap className="h-4 w-4" />
                   {feature.benefit}
                 </div>

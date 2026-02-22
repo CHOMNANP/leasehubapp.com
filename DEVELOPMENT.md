@@ -53,7 +53,7 @@ Edit the text directly in the page files:
 Edit `tailwind.config.js`:
 ```javascript
 colors: {
-  renthive: {
+  leasehub: {
     600: "#your-color-hex", // Primary brand color
   }
 }

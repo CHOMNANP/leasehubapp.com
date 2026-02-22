@@ -66,6 +66,6 @@
     text-wrap: balance;
   }
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-renthive-600 to-renthive-400;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-leasehub-600 to-leasehub-400;
   }
 }

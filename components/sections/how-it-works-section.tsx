@@ -42,15 +42,15 @@ export function HowItWorksSection() {
           {steps.map((item, index) => (
             <div key={item.title} className="relative">
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-renthive-200 to-transparent" />
+                <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-leasehub-200 to-transparent" />
               )}
-              <Card className="relative h-full border-renthive-100">
+              <Card className="relative h-full border-leasehub-100">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-renthive-600 flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-lg bg-leasehub-600 flex items-center justify-center">
                       <item.icon className="h-6 w-6 text-white" />
                     </div>
-                    <span className="text-4xl font-bold text-renthive-100">
+                    <span className="text-4xl font-bold text-leasehub-100">
                       {item.step}
                     </span>
                   </div>

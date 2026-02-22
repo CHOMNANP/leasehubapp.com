@@ -19,7 +19,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Features",
-  description: "Explore RentHive's features designed specifically for small landlords. Automated rent collection, tenant management, maintenance tracking, and more.",
+  description: "Explore LeaseHub's features designed specifically for small landlords. Automated rent collection, tenant management, maintenance tracking, and more.",
 }
 
 const mainFeatures = [
@@ -107,7 +107,7 @@ export default function FeaturesPage() {
       <section className="pt-24 pb-12">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-4 bg-renthive-100 text-renthive-800">Features</Badge>
+            <Badge className="mb-4 bg-leasehub-100 text-leasehub-800">Features</Badge>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
               Everything you need to manage your rentals
             </h1>
@@ -131,8 +131,8 @@ export default function FeaturesPage() {
                 }`}
               >
                 <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="w-12 h-12 rounded-lg bg-renthive-100 flex items-center justify-center mb-6">
-                    <feature.icon className="h-6 w-6 text-renthive-700" />
+                  <div className="w-12 h-12 rounded-lg bg-leasehub-100 flex items-center justify-center mb-6">
+                    <feature.icon className="h-6 w-6 text-leasehub-700" />
                   </div>
                   <h2 className="text-3xl font-bold mb-4">{feature.title}</h2>
                   <p className="text-lg text-muted-foreground mb-6">
@@ -141,7 +141,7 @@ export default function FeaturesPage() {
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit) => (
                       <li key={benefit} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-renthive-600 shrink-0 mt-0.5" />
+                        <Check className="h-5 w-5 text-leasehub-600 shrink-0 mt-0.5" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -177,8 +177,8 @@ export default function FeaturesPage() {
             {additionalFeatures.map((feature) => (
               <Card key={feature.title} className="h-full">
                 <CardContent className="p-6">
-                  <div className="w-10 h-10 rounded-lg bg-renthive-100 flex items-center justify-center mb-4">
-                    <feature.icon className="h-5 w-5 text-renthive-700" />
+                  <div className="w-10 h-10 rounded-lg bg-leasehub-100 flex items-center justify-center mb-4">
+                    <feature.icon className="h-5 w-5 text-leasehub-700" />
                   </div>
                   <h3 className="font-semibold mb-2">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">
@@ -203,7 +203,7 @@ export default function FeaturesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="gap-2" asChild>
-                <Link href="https://app.renthive.io/signup">
+                <Link href="https://dashboard.leasehubapp.com/signup">
                   Get Started Free
                   <ArrowRight className="h-4 w-4" />
                 </Link>

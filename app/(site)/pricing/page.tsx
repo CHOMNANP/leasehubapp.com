@@ -1,20 +1,21 @@
-import type { Metadata } from "next"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Check, HelpCircle, ArrowRight } from "lucide-react"
+import type { Metadata } from "next";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Check, HelpCircle, ArrowRight } from "lucide-react";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "Simple, transparent pricing for RentHive. Free for your first property (up to 10 units). Then just $2 per unit per month. No hidden fees.",
-}
+  description:
+    "Simple, transparent pricing for LeaseHub. Free for your first property (up to 10 units). Then just $2 per unit per month. No hidden fees.",
+};
 
 const plans = [
   {
@@ -34,7 +35,7 @@ const plans = [
       "Digital lease storage",
     ],
     cta: "Get Started Free",
-    href: "https://app.renthive.io/signup",
+    href: "https://dashboard.leasehubapp.com/auth",
     popular: false,
   },
   {
@@ -56,45 +57,53 @@ const plans = [
       "Multi-user accounts",
     ],
     cta: "Start Free Trial",
-    href: "https://app.renthive.io/signup",
+    href: "https://dashboard.leasehubapp.com/signup",
     popular: true,
   },
-]
+];
 
 const faqs = [
   {
     question: "Is the free plan really free forever?",
-    answer: "Yes! The Starter plan is free forever for one property with up to 10 units. No credit card required, no time limits, no hidden fees. When you're ready to add more properties, you can upgrade to Professional.",
+    answer:
+      "Yes! The Starter plan is free forever for one property with up to 10 units. No credit card required, no time limits, no hidden fees. When you're ready to add more properties, you can upgrade to Professional.",
   },
   {
     question: "How does the $2 per unit pricing work?",
-    answer: "Professional plan pricing is simple: $2 per unit per month. If you have 15 units across multiple properties, you pay $30/month. If you have 50 units, you pay $100/month. No setup fees, no hidden costs.",
+    answer:
+      "Professional plan pricing is simple: $2 per unit per month. If you have 15 units across multiple properties, you pay $30/month. If you have 50 units, you pay $100/month. No setup fees, no hidden costs.",
   },
   {
     question: "Can I switch between plans?",
-    answer: "Absolutely. You can upgrade from Starter to Professional at any time. If you downgrade from Professional to Starter, you'll keep access to Pro features until the end of your billing period.",
+    answer:
+      "Absolutely. You can upgrade from Starter to Professional at any time. If you downgrade from Professional to Starter, you'll keep access to Pro features until the end of your billing period.",
   },
   {
     question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards (Visa, Mastercard, American Express) and ACH bank transfers for Professional plans. We use Stripe for secure payment processing.",
+    answer:
+      "We accept all major credit cards (Visa, Mastercard, American Express) and ACH bank transfers for Professional plans. We use Stripe for secure payment processing.",
   },
   {
     question: "Is there a discount for annual billing?",
-    answer: "Yes! If you choose annual billing for the Professional plan, you get 2 months free (17% discount). That's $20/unit/year instead of $24.",
+    answer:
+      "Yes! If you choose annual billing for the Professional plan, you get 2 months free (17% discount). That's $20/unit/year instead of $24.",
   },
   {
     question: "What happens to my data if I cancel?",
-    answer: "You own your data. If you cancel, you can export all your data (tenants, leases, financial records) at any time. We keep backups for 30 days after cancellation, then permanently delete all data.",
+    answer:
+      "You own your data. If you cancel, you can export all your data (tenants, leases, financial records) at any time. We keep backups for 30 days after cancellation, then permanently delete all data.",
   },
   {
     question: "Do you offer refunds?",
-    answer: "We offer a 30-day money-back guarantee for Professional plans. If you're not satisfied within the first 30 days, contact us for a full refund—no questions asked.",
+    answer:
+      "We offer a 30-day money-back guarantee for Professional plans. If you're not satisfied within the first 30 days, contact us for a full refund—no questions asked.",
   },
   {
     question: "Is there a plan for large portfolios (50+ units)?",
-    answer: "For portfolios over 50 units, we offer custom Enterprise pricing with dedicated support, onboarding assistance, and potential volume discounts. Contact our sales team for details.",
+    answer:
+      "For portfolios over 50 units, we offer custom Enterprise pricing with dedicated support, onboarding assistance, and potential volume discounts. Contact our sales team for details.",
   },
-]
+];
 
 const comparisonFeatures = [
   { name: "Online rent collection", starter: true, pro: true },
@@ -112,7 +121,7 @@ const comparisonFeatures = [
   { name: "Priority support", starter: false, pro: true },
   { name: "Custom branding", starter: false, pro: true },
   { name: "Multi-user accounts", starter: false, pro: true },
-]
+];
 
 export default function PricingPage() {
   return (
@@ -121,12 +130,14 @@ export default function PricingPage() {
       <section className="pt-24 pb-12">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-4 bg-renthive-100 text-renthive-800">Pricing</Badge>
+            <Badge className="mb-4 bg-leasehub-100 text-leasehub-800">
+              Pricing
+            </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
               Simple, transparent pricing
             </h1>
             <p className="text-lg text-muted-foreground">
-              Start free, scale as you grow. No hidden fees, no setup costs, 
+              Start free, scale as you grow. No hidden fees, no setup costs,
               cancel anytime.
             </p>
           </div>
@@ -138,23 +149,27 @@ export default function PricingPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {plans.map((plan) => (
-              <Card 
-                key={plan.name} 
-                className={`relative ${plan.popular ? 'border-renthive-500 shadow-xl scale-105' : ''}`}
+              <Card
+                key={plan.name}
+                className={`relative ${plan.popular ? "border-leasehub-500 shadow-xl scale-105" : ""}`}
               >
                 {plan.popular && (
-                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-renthive-600 hover:bg-renthive-700">
+                  <Badge className="absolute -top-3 left-1/2 -translate-x-1/2 bg-leasehub-600 hover:bg-leasehub-700">
                     Most Popular
                   </Badge>
                 )}
                 <CardHeader className="text-center pb-4">
                   <h3 className="text-2xl font-bold">{plan.name}</h3>
-                  <p className="text-sm text-muted-foreground">{plan.description}</p>
+                  <p className="text-sm text-muted-foreground">
+                    {plan.description}
+                  </p>
                   <div className="mt-6">
                     <span className="text-5xl font-bold">{plan.price}</span>
-                    <span className="text-muted-foreground ml-2">{plan.priceDetail}</span>
+                    <span className="text-muted-foreground ml-2">
+                      {plan.priceDetail}
+                    </span>
                   </div>
-                  <p className="text-sm font-medium text-renthive-700 mt-2">
+                  <p className="text-sm font-medium text-leasehub-700 mt-2">
                     {plan.unitLimit}
                   </p>
                 </CardHeader>
@@ -162,13 +177,13 @@ export default function PricingPage() {
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <Check className="h-5 w-5 text-renthive-600 shrink-0 mt-0.5" />
+                        <Check className="h-5 w-5 text-leasehub-600 shrink-0 mt-0.5" />
                         <span className="text-sm">{feature}</span>
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    className="w-full gap-2" 
+                  <Button
+                    className="w-full gap-2"
                     size="lg"
                     variant={plan.popular ? "default" : "outline"}
                     asChild
@@ -186,7 +201,10 @@ export default function PricingPage() {
           <div className="text-center mt-12">
             <p className="text-sm text-muted-foreground">
               Need more than 50 units?{" "}
-              <Link href="/contact" className="text-renthive-700 hover:underline font-medium">
+              <Link
+                href="/contact"
+                className="text-leasehub-700 hover:underline font-medium"
+              >
                 Contact us for Enterprise pricing
               </Link>
             </p>
@@ -198,29 +216,40 @@ export default function PricingPage() {
       <section className="py-24 bg-muted/30">
         <div className="container">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl font-bold text-center mb-12">Compare plans</h2>
+            <h2 className="text-2xl font-bold text-center mb-12">
+              Compare plans
+            </h2>
             <div className="bg-background rounded-xl border shadow-sm overflow-hidden">
               <table className="w-full">
                 <thead>
                   <tr className="border-b bg-muted/50">
-                    <th className="text-left py-4 px-6 font-semibold">Feature</th>
-                    <th className="text-center py-4 px-6 font-semibold">Starter</th>
-                    <th className="text-center py-4 px-6 font-semibold text-renthive-700">Pro</th>
+                    <th className="text-left py-4 px-6 font-semibold">
+                      Feature
+                    </th>
+                    <th className="text-center py-4 px-6 font-semibold">
+                      Starter
+                    </th>
+                    <th className="text-center py-4 px-6 font-semibold text-leasehub-700">
+                      Pro
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonFeatures.map((feature, index) => (
-                    <tr key={feature.name} className={index % 2 === 0 ? 'bg-muted/20' : ''}>
+                    <tr
+                      key={feature.name}
+                      className={index % 2 === 0 ? "bg-muted/20" : ""}
+                    >
                       <td className="py-3 px-6 text-sm">{feature.name}</td>
                       <td className="text-center py-3 px-6">
                         {feature.starter ? (
-                          <Check className="h-5 w-5 text-renthive-600 mx-auto" />
+                          <Check className="h-5 w-5 text-leasehub-600 mx-auto" />
                         ) : (
                           <span className="text-muted-foreground">—</span>
                         )}
                       </td>
                       <td className="text-center py-3 px-6">
-                        <Check className="h-5 w-5 text-renthive-600 mx-auto" />
+                        <Check className="h-5 w-5 text-leasehub-600 mx-auto" />
                       </td>
                     </tr>
                   ))}
@@ -236,9 +265,11 @@ export default function PricingPage() {
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Frequently asked questions</h2>
+              <h2 className="text-3xl font-bold mb-4">
+                Frequently asked questions
+              </h2>
               <p className="text-muted-foreground">
-                Everything you need to know about RentHive pricing.
+                Everything you need to know about LeaseHub pricing.
               </p>
             </div>
 
@@ -255,11 +286,12 @@ export default function PricingPage() {
               ))}
             </Accordion>
 
-            <div className="mt-12 p-6 bg-renthive-50 rounded-xl text-center">
-              <HelpCircle className="h-8 w-8 text-renthive-600 mx-auto mb-3" />
+            <div className="mt-12 p-6 bg-leasehub-50 rounded-xl text-center">
+              <HelpCircle className="h-8 w-8 text-leasehub-600 mx-auto mb-3" />
               <h3 className="font-semibold mb-2">Still have questions?</h3>
               <p className="text-sm text-muted-foreground mb-4">
-                Can&apos;t find the answer you&apos;re looking for? Reach out to our team.
+                Can&apos;t find the answer you&apos;re looking for? Reach out to
+                our team.
               </p>
               <Button variant="outline" asChild>
                 <Link href="/contact">Contact Support</Link>
@@ -269,5 +301,5 @@ export default function PricingPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

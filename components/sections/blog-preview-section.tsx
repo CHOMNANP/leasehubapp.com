@@ -62,8 +62,8 @@ export function BlogPreviewSection() {
               <CardContent className="p-0">
                 <Link href={`/blog/${post.slug}`}>
                   <div className="aspect-video bg-muted relative overflow-hidden rounded-t-lg">
-                    <div className="absolute inset-0 bg-gradient-to-br from-renthive-100 to-renthive-50 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-renthive-200">{post.category[0]}</span>
+                    <div className="absolute inset-0 bg-gradient-to-br from-leasehub-100 to-leasehub-50 flex items-center justify-center">
+                      <span className="text-4xl font-bold text-leasehub-200">{post.category[0]}</span>
                     </div>
                   </div>
                 </Link>
@@ -75,7 +75,7 @@ export function BlogPreviewSection() {
                     <span className="text-xs text-muted-foreground">{post.readTime}</span>
                   </div>
                   <Link href={`/blog/${post.slug}`}>
-                    <h3 className="text-lg font-semibold mb-2 group-hover:text-renthive-700 transition-colors">
+                    <h3 className="text-lg font-semibold mb-2 group-hover:text-leasehub-700 transition-colors">
                       {post.title}
                     </h3>
                   </Link>

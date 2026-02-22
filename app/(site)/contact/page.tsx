@@ -3,7 +3,7 @@ import ContactForm from "./contact-form"
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with the RentHive team. We're here to help with questions, demo requests, or partnership inquiries.",
+  description: "Get in touch with the LeaseHub team. We're here to help with questions, demo requests, or partnership inquiries.",
 }
 
 export default function ContactPage() {

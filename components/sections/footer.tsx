@@ -35,10 +35,10 @@ export function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="flex items-center gap-2 font-bold text-lg mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-renthive-600 text-white">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-leasehub-600 text-white">
                 <Home className="h-5 w-5" />
               </div>
-              <span>RentHive</span>
+              <span>LeaseHub</span>
             </Link>
             <p className="text-sm text-muted-foreground mb-4">
               Property management software built for small landlords with 2-20 units.
@@ -112,7 +112,7 @@ export function Footer() {
 
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} RentHive. All rights reserved.
+            © {new Date().getFullYear()} LeaseHub. All rights reserved.
           </p>
           <p className="text-sm text-muted-foreground">
             Made with care for small landlords everywhere.

@@ -4,8 +4,8 @@ import { structureTool } from 'sanity/structure'
 import { schemaTypes } from './sanity/schemas'
 
 export default defineConfig({
-  name: 'renthive-website',
-  title: 'RentHive Website',
+  name: 'leasehub-website',
+  title: 'LeaseHub Website',
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'your-project-id',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   plugins: [structureTool(), visionTool()],

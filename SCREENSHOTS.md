@@ -2,7 +2,7 @@
 
 ## Current Placeholders
 
-The website currently uses placeholder elements where your RentHive screenshots should go.
+The website currently uses placeholder elements where your LeaseHub screenshots should go.
 
 ## Where to Add Screenshots
 
@@ -28,7 +28,7 @@ The website currently uses placeholder elements where your RentHive screenshots 
 ## How to Replace
 
 ### Option 1: Static Images (Simple)
-1. Take screenshots of your RentHive app
+1. Take screenshots of your LeaseHub app
 2. Save them to `public/images/`:
    - `dashboard.jpg` - Main dashboard
    - `rent-collection.jpg` - Payment flow
@@ -42,7 +42,7 @@ import Image from "next/image"
 
 <Image 
   src="/images/dashboard.jpg" 
-  alt="RentHive Dashboard"
+  alt="LeaseHub Dashboard"
   width={800}
   height={600}
   className="rounded-xl shadow-lg"

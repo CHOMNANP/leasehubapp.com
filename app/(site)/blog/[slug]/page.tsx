@@ -39,7 +39,7 @@ const posts = [
 
       <h2>Step 2: Set Up Your System</h2>
 
-      <p>If you're using RentHive, this is incredibly simple:</p>
+      <p>If you're using LeaseHub, this is incredibly simple:</p>
 
       <ol>
         <li>Connect your bank account (takes 2 minutes)</li>
@@ -94,7 +94,7 @@ const posts = [
     category: "Getting Started",
     readTime: "5 min read",
     author: {
-      name: "RentHive Team",
+      name: "LeaseHub Team",
       role: "Property Management Experts",
     },
   },
@@ -107,7 +107,7 @@ const posts = [
     category: "Productivity",
     readTime: "4 min read",
     author: {
-      name: "RentHive Team",
+      name: "LeaseHub Team",
       role: "Property Management Experts",
     },
   },
@@ -120,7 +120,7 @@ const posts = [
     category: "Legal",
     readTime: "3 min read",
     author: {
-      name: "RentHive Team",
+      name: "LeaseHub Team",
       role: "Property Management Experts",
     },
   },
@@ -133,7 +133,7 @@ const posts = [
     category: "Getting Started",
     readTime: "6 min read",
     author: {
-      name: "RentHive Team",
+      name: "LeaseHub Team",
       role: "Property Management Experts",
     },
   },
@@ -146,7 +146,7 @@ const posts = [
     category: "Growth",
     readTime: "7 min read",
     author: {
-      name: "RentHive Team",
+      name: "LeaseHub Team",
       role: "Property Management Experts",
     },
   },
@@ -159,7 +159,7 @@ const posts = [
     category: "Growth",
     readTime: "5 min read",
     author: {
-      name: "RentHive Team",
+      name: "LeaseHub Team",
       role: "Property Management Experts",
     },
   },
@@ -211,7 +211,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               </Link>
             </Button>
 
-            <Badge className="mb-4 bg-renthive-100 text-renthive-800">
+            <Badge className="mb-4 bg-leasehub-100 text-leasehub-800">
               {post.category}
             </Badge>
 
@@ -241,8 +241,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <section className="pb-12">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <div className="aspect-video rounded-xl bg-gradient-to-br from-renthive-100 to-renthive-50 flex items-center justify-center">
-              <span className="text-8xl font-bold text-renthive-200">
+            <div className="aspect-video rounded-xl bg-gradient-to-br from-leasehub-100 to-leasehub-50 flex items-center justify-center">
+              <span className="text-8xl font-bold text-leasehub-200">
                 {post.category[0]}
               </span>
             </div>
@@ -255,15 +255,15 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
         <div className="container">
           <div className="max-w-3xl mx-auto">
             <div 
-              className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-renthive-700 prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-renthive-500 prose-blockquote:bg-renthive-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg"
+              className="prose prose-lg max-w-none prose-headings:font-bold prose-headings:text-foreground prose-p:text-muted-foreground prose-a:text-leasehub-700 prose-a:no-underline hover:prose-a:underline prose-strong:text-foreground prose-blockquote:border-leasehub-500 prose-blockquote:bg-leasehub-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:rounded-r-lg"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
 
             {/* Author Box */}
             <Card className="mt-12 bg-muted/50">
               <CardContent className="p-6 flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-renthive-100 flex items-center justify-center shrink-0">
-                  <User className="h-6 w-6 text-renthive-700" />
+                <div className="w-12 h-12 rounded-full bg-leasehub-100 flex items-center justify-center shrink-0">
+                  <User className="h-6 w-6 text-leasehub-700" />
                 </div>
                 <div>
                   <p className="font-semibold">{post.author.name}</p>
@@ -294,7 +294,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                             {relatedPost.category}
                           </Badge>
                           <Link href={`/blog/${relatedPost.slug}`}>
-                            <h3 className="font-semibold hover:text-renthive-700 transition-colors">
+                            <h3 className="font-semibold hover:text-leasehub-700 transition-colors">
                               {relatedPost.title}
                             </h3>
                           </Link>
@@ -323,11 +323,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
               Ready to simplify your property management?
             </h2>
             <p className="text-muted-foreground mb-6">
-              Join 500+ small landlords using RentHive to automate rent collection 
+              Join 500+ small landlords using LeaseHub to automate rent collection 
               and reclaim their time.
             </p>
             <Button size="lg" className="gap-2" asChild>
-              <Link href="https://app.renthive.io/signup">
+              <Link href="https://dashboard.leasehubapp.com/signup">
                 Get Started Free
               </Link>
             </Button>

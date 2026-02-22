@@ -29,12 +29,12 @@ export default function ContactForm() {
       <section className="pt-24 pb-12">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center">
-            <Badge className="mb-4 bg-renthive-100 text-renthive-800">Contact</Badge>
+            <Badge className="mb-4 bg-leasehub-100 text-leasehub-800">Contact</Badge>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
               Get in touch
             </h1>
             <p className="text-lg text-muted-foreground">
-              Have a question about RentHive? Need a demo for your team? 
+              Have a question about LeaseHub? Need a demo for your team? 
               Just want to say hi? We&apos;d love to hear from you.
             </p>
           </div>
@@ -47,26 +47,26 @@ export default function ContactForm() {
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-16">
             <Card className="text-center">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-lg bg-renthive-100 flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-6 w-6 text-renthive-700" />
+                <div className="w-12 h-12 rounded-lg bg-leasehub-100 flex items-center justify-center mx-auto mb-4">
+                  <Mail className="h-6 w-6 text-leasehub-700" />
                 </div>
                 <h3 className="font-semibold mb-2">Email Us</h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   For general inquiries and support
                 </p>
                 <a 
-                  href="mailto:hello@renthive.io" 
-                  className="text-renthive-700 hover:underline font-medium"
+                  href="mailto:hello@leasehubapp.com" 
+                  className="text-leasehub-700 hover:underline font-medium"
                 >
-                  hello@renthive.io
+                  hello@leasehubapp.com
                 </a>
               </CardContent>
             </Card>
 
             <Card className="text-center">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-lg bg-renthive-100 flex items-center justify-center mx-auto mb-4">
-                  <MessageSquare className="h-6 w-6 text-renthive-700" />
+                <div className="w-12 h-12 rounded-lg bg-leasehub-100 flex items-center justify-center mx-auto mb-4">
+                  <MessageSquare className="h-6 w-6 text-leasehub-700" />
                 </div>
                 <h3 className="font-semibold mb-2">Live Chat</h3>
                 <p className="text-sm text-muted-foreground mb-4">
@@ -80,8 +80,8 @@ export default function ContactForm() {
 
             <Card className="text-center">
               <CardContent className="p-6">
-                <div className="w-12 h-12 rounded-lg bg-renthive-100 flex items-center justify-center mx-auto mb-4">
-                  <Clock className="h-6 w-6 text-renthive-700" />
+                <div className="w-12 h-12 rounded-lg bg-leasehub-100 flex items-center justify-center mx-auto mb-4">
+                  <Clock className="h-6 w-6 text-leasehub-700" />
                 </div>
                 <h3 className="font-semibold mb-2">Response Time</h3>
                 <p className="text-sm text-muted-foreground mb-4">
@@ -100,8 +100,8 @@ export default function ContactForm() {
               <CardContent className="p-8">
                 {submitted ? (
                   <div className="text-center py-12">
-                    <div className="w-16 h-16 rounded-full bg-renthive-100 flex items-center justify-center mx-auto mb-4">
-                      <CheckCircle2 className="h-8 w-8 text-renthive-700" />
+                    <div className="w-16 h-16 rounded-full bg-leasehub-100 flex items-center justify-center mx-auto mb-4">
+                      <CheckCircle2 className="h-8 w-8 text-leasehub-700" />
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Message sent!</h3>
                     <p className="text-muted-foreground">
@@ -190,7 +190,7 @@ export default function ContactForm() {
             <div className="grid gap-4">
               <Card>
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-2">How do I get started with RentHive?</h3>
+                  <h3 className="font-semibold mb-2">How do I get started with LeaseHub?</h3>
                   <p className="text-sm text-muted-foreground">
                     Simply sign up for a free account, add your first property, and invite your tenants. 
                     Most landlords are up and running in under 10 minutes.
